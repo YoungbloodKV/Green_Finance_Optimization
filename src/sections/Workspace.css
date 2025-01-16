@@ -1,0 +1,199 @@
+/* General Workspace Styling */
+.workspace-container {
+    text-align: center;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #004d40;
+    background: linear-gradient(to bottom, #e8f5e9, #f1f8f6);
+    min-height: 100vh;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Upload and Results Section */
+.upload-section, .results-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #80cbc4;
+    border-radius: 12px;
+    background-color: #e8f5e9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-section:hover, .results-section:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.upload-btn, .view-results-btn, .action-button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upload-btn {
+    background-color: #004d40;
+    color: white;
+}
+
+.upload-btn:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button {
+    background-color: #00796b;
+    color: white;
+}
+
+.action-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-results-btn {
+    background-color: #a5d6a7;
+    color: #004d40;
+}
+
+.view-results-btn:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Message */
+.upload-message, .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Results Display */
+.results-display {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.results-display h3 {
+    color: #004d40;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Chart Container */
+.chart-container {
+    margin: 20px auto;
+    max-width: 750px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Section */
+.input-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #004d40;
+    text-align: left;
+}
+
+.input-section input[type="range"] {
+    width: 70%;
+    margin: 15px auto;
+    accent-color: #004d40;
+    background: linear-gradient(to right, #004d40, #80cbc4);
+    border-radius: 10px;
+    outline: none;
+    height: 8px;
+}
+
+.input-section input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00796b;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-section span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00796b;
+    margin-left: 10px;
+}
+
+/* Input and Dropdown Styling */
+input, select {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+select {
+    background-color: #e8f5e9;
+    color: #004d40;
+}
+
+select:hover {
+    background-color: #c8e6c9;
+    border-color: #80cbc4;
+}
+
+/* Predictions and Allocation Sections */
+.predictions-section, .allocation-section {
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.predictions-section h3, .allocation-section h3 {
+    color: #004d40;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,105 @@
+/* General Styling for the TopBar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 77, 64, 0.85); /* Transparent dark green */
+    padding: 15px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Scroll Shadow */
+.scroll-shadow {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow when scrolling */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Section with Image and Text */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between logo and text */
+}
+
+.site-logo {
+    height: 40px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure logo fits well */
+}
+
+/* Site Name Styling */
+.logo-container h1 {
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    color: #a5d6a7; /* Light green */
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo-container h1:hover {
+    color: #e8f5e9; /* Slightly lighter green on hover */
+}
+
+/* Navigation Menu */
+.navigation ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease, transform 0.2s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #a5d6a7; /* Light green */
+    transform: scale(1.1); /* Slight zoom */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background highlight */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .site-logo {
+        height: 30px; /* Adjust logo size for smaller screens */
+    }
+}

@@ -1,0 +1,133 @@
+.history-container {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #004d40;
+    text-align: center;
+}
+
+.history-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.history-container p {
+    margin-bottom: 20px;
+    color: #607d8b;
+}
+
+.history-filters {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.history-filters select {
+    padding: 5px 10px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    color: #004d40;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history-table th,
+.history-table td {
+    border: 1px solid #a5d6a7;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.history-table th {
+    background-color: #004d40;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #e8f5e9;
+}
+
+.history-table tr:hover {
+    background-color: #c8e6c9; /* Light green hover effect */
+    cursor: pointer;
+}
+
+/* Fixed Chart Section */
+.charts-fixed {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 70%; /* Adjusted width */
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.chart-section {
+    margin-bottom: 20px;
+}
+
+.chart-section h3 {
+    color: #004d40;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.chart-section canvas {
+    width: 100%; /* Ensures responsiveness */
+    max-width: 400px; /* Limit the size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the chart */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #d32f2f;
+}
+
+.chart-toggle button {
+    padding: 10px 20px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chart-toggle button:hover {
+    background-color: #2d6a4f;
+}

@@ -1,0 +1,215 @@
+/* Main container with full-page background image */
+.about-container {
+    position: relative;
+    background-image: url('/greenfinjpg.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Fade-in animation for smooth page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Content wrapper with centered heading */
+.content-wrapper {
+    background: rgba(0, 77, 64, 0.85); /* Dark green transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    animation: slideIn 1s ease-out; /* Entry animation */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Bold heading */
+.about-heading {
+    font-size: 3rem; /* Increased font size for better visibility */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e0f7fa; /* Light teal for a softer contrast */
+}
+
+/* Description text */
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* ESG Cards Section */
+.esg-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+/* Individual ESG Card */
+.esg-card {
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInCard 1s ease-in-out;
+}
+
+/* Card hover effect */
+.esg-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Elevated hover shadow */
+}
+
+/* Fade-in animation for cards */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Card Image */
+.esg-card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #f0f4c3; /* Light green for better contrast */
+    border-bottom: 2px solid #80cbc4; /* Subtle separator */
+}
+
+/* Card Content */
+.esg-card-content {
+    padding: 15px;
+}
+
+.esg-card-content h2 {
+    font-size: 1.6rem; /* Slightly larger font for headings */
+    color: #004d40; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.esg-card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Footer Section */
+.about-footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+}
+
+/* Footer Team Credits */
+.team-credits {
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in; /* Smooth entry animation */
+}
+
+.team-credits h4 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: #80cbc4;
+    margin-bottom: 10px;
+}
+
+.team-credits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-credits li {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #b2dfdb;
+    position: relative;
+    padding-left: 20px;
+}
+
+.team-credits li::after {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #80cbc4;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .esg-card {
+        flex: 1 1 calc(50% - 30px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .esg-card {
+        flex: 1 1 100%; /* Full width for smaller screens */
+        max-width: 100%;
+    }
+
+    .esg-card-image {
+        height: 120px;
+    }
+
+    .about-heading {
+        font-size: 2.4rem; /* Adjust heading size for smaller screens */
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .why-esg-card {
+        width: 100%; /* Ensure cards take full width on small screens */
+    }
+}

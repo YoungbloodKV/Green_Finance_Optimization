@@ -1,0 +1,20 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    background-color: #e8f5e9; /* Light green background */
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Styling for Responsive Layout */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+}

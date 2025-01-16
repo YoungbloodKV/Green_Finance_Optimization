@@ -1,0 +1,78 @@
+/* File Upload Container */
+.file-upload-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* File Drop Area */
+.file-drop-area {
+    border: 2px dashed #4caf50;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.file-drop-area.dragging {
+    background-color: #e8f5e9;
+    border-color: #388e3c;
+}
+
+/* Buttons */
+.browse-button,
+.upload-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.browse-button:hover,
+.upload-button:hover {
+    background-color: #45a049;
+}
+
+.upload-button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+/* Error and Upload Messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.upload-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .file-upload-container {
+        padding: 15px;
+    }
+
+    .browse-button,
+    .upload-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
