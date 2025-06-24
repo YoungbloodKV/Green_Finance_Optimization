@@ -1,4 +1,82 @@
 # Green_Finance_Optimization
+ESG-Driven Fund Allocation and Engagement Platform
+
+Gree Finance Optimization e is a machine learning–powered platform that enables investors and institutions to make data-driven, ESG-aligned capital allocation decisions. It combines predictive modeling, optimization algorithms, and interactive engagement tools to support sustainable finance with transparency and impact.
+
+---
+
+## Overview
+
+Green Finance Optimization  evaluates the Environmental, Social, and Governance (ESG) performance of sustainability-related projects using time-series indicators, predicts future ESG scores and risk factors, and optimally allocates investment funds based on budget and impact potential.
+
+This platform also features educational and interactive components, making it accessible and engaging for both institutional users and ESG-curious individuals.
+
+
+## Key Features
+
+### 1. ESG Score & Risk Prediction
+- Uses Random Forest models to forecast ESG scores and risk factors based on historical data.
+- Supports multi-year, multi-project forecasting across countries and sectors.
+
+### 2. Optimization Engine
+- Applies MILP (Mixed Integer Linear Programming) using PuLP to determine optimal fund distribution.
+- Objective: Maximize ESG-adjusted impact under a budget constraint.
+- Supports filtering by project type or category.
+
+### 3. NLP Insights (optional modules)
+- Leverages FinBERT-ESG for project sentiment analysis by ESG pillar.
+- Generates natural-language summaries using a T5-based model for interpretability.
+
+### 4. User Dashboard (Frontend)
+- Clean and responsive React UI with multiple functional sections:
+  - **Home**: Platform mission, ESG awareness, and introductory walkthrough
+  - **Work**: Upload CSV data, enter budget, run models, and receive results
+  - **History**: View previously executed allocations and outcomes
+  - **Quiz**: Interactive ESG quiz with gamified rewards (Xbox-style badge system)
+
+---
+
+## How It Works
+
+1. Upload a structured CSV file containing ESG indicators by year, country, and series.
+2. The backend:
+   - Cleans and transforms the data
+   - Predicts ESG scores and project-specific risk
+   - Allocates budget using MILP optimization
+3. Results include a ranked list of projects selected for funding along with ESG and risk metrics.
+
+---
+
+## Backend Stack
+
+| Component     | Technologies Used                                  |
+|---------------|----------------------------------------------------|
+| Data Handling | Pandas, NumPy                                      |
+| ML Models     | scikit-learn (RandomForestRegressor), Transformers |
+| Optimization  | PuLP (MILP solver for allocation)                  |
+| NLP Modules   | FinBERT-ESG, T5-small                              |
+| Framework     | Flask (REST endpoints)                             |
+
+---
+
+## Frontend Stack
+
+| Component     | Technologies Used      |
+|---------------|------------------------|
+| Framework     | React.js               |
+| Design        | Responsive CSS, Flexbox/Grid |
+| UI Structure  | Page-based (Home, Work, History, Quiz) |
+
+---
+
+## Demo & Media
+
+Visual previews and walkthrough video are available in the main directory as image files :
+eg: HOMEpage.png
+ESGinfoCard1.pnh
+
+
+> These assets demonstrate the full user flow — from uploading data to viewing optimized fund allocations.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
