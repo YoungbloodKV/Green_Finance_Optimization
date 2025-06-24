@@ -1,5 +1,6 @@
 # Green_Finance_Optimization
 ESG-Driven Fund Allocation and Engagement Platform
+![License: Proprietary](https://img.shields.io/badge/license-Proprietary-red)
 
 Gree Finance Optimization e is a machine learning–powered platform that enables investors and institutions to make data-driven, ESG-aligned capital allocation decisions. It combines predictive modeling, optimization algorithms, and interactive engagement tools to support sustainable finance with transparency and impact.
 
